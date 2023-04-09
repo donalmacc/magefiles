@@ -15,7 +15,8 @@ import (
 
 // A build step that requires additional params, or platform specific steps for example
 func Build() error {
-	fmt.Println("Building...")
+	wd, _ := os.Getwd()
+ 	fmt.Printf("Building from %s\n", wd)
 	return nil
 }
 
